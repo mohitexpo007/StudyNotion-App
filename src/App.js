@@ -15,10 +15,10 @@ function App() {
       <Navbar isloggedin={isloggedin} setisloggedin={setisloggedin}/>
 
       <Routes>
-        <Route to="/" element={<Home></Home>}></Route>
-        <Route to="/login" element={<Login/>}></Route>
-        <Route to="/signup" element={<Signup></Signup>}></Route>
-        <Route to="/dashboard" element={<Dashboard></Dashboard>}></Route> 
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/login" element={<Login setisloggedin={setisloggedin}/>}></Route>
+        <Route path="/signup" element={<Signup setisloggedin={setisloggedin}></Signup>}></Route>
+        <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route> 
       </Routes>
 
     </div>

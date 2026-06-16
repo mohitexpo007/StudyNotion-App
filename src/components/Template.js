@@ -1,4 +1,6 @@
 import Frame from "../assets/frame.png"
+import Signinform from "./Signinform"
+import Signupform from "./Signupform"
 
 function Template({title,desc1,desc2,image,formtype,setisloggedin}){
   return(
@@ -12,8 +14,8 @@ function Template({title,desc1,desc2,image,formtype,setisloggedin}){
         </p>
 
         {formtype==="signup"?
-        (<Signupform></Signupform>):
-        (<Signinform></Signinform>)}
+        (<Signupform setisloggedin={setisloggedin}></Signupform>):
+        (<Signinform setisloggedin={setisloggedin}></Signinform>)}
 
           <div>
             <div></div>
@@ -35,3 +37,5 @@ function Template({title,desc1,desc2,image,formtype,setisloggedin}){
     
   )
 }
+
+export default Template;

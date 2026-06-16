@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom"
 import logo from "../assets/Logo.svg"
 import toast from "react-hot-toast";
+import Login from "../pages/Login";
+import { useNavigate } from "react-router-dom";
 
 function Navbar(props){
+  const navigate=useNavigate();
   let isloggedin=props.isloggedin;
   let setisloggedin=props.setisloggedin;
   return(
